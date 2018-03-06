@@ -12,8 +12,8 @@ client.on('message', message => {
   if (message.content.startsWith ('puppy')|| message.content.startsWith ('puppies')||message.content.startsWith ('doggo')||message.content.startsWith ('doggos')||message.content.startsWith ('pupper')||message.content.startsWith ('baby')||message.content.startsWith ('goodest boy')) {
     dog()
       .then(url => {
-        message.reply(url)
-        })
-      };
+        message.channel.sendMessage(url);
+      })
+    };
   });
 client.login(settings.token);
